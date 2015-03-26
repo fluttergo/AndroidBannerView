@@ -26,13 +26,12 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.banner);
 		mJazzy = (JazzyViewPager) findViewById(R.id.jazzy_pager);
 		mJazzy.setAdapter(new MainAdapter());
 		banner = new Banner(mJazzy,
 				((PageIndicator) findViewById(R.id.indicator)),
 				(TextView) findViewById(R.id.pagerdescribe));
-		// setViewPagerIndicator(mJazzy);
 	}
 
 	@Override
@@ -43,7 +42,6 @@ public class MainActivity extends Activity {
 
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
 		super.onResume();
 		banner.startLoop();
 	}
@@ -85,12 +83,18 @@ public class MainActivity extends Activity {
 			text.setGravity(Gravity.CENTER);
 			text.setTextSize(30);
 			text.setTextColor(Color.WHITE);
-			text.setText("Page " + position);
+		
 			text.setPadding(30, 30, 30, 30);
 			int bg = Color.rgb((int) Math.floor(Math.random() * 128) + 64,
 					(int) Math.floor(Math.random() * 128) + 64,
 					(int) Math.floor(Math.random() * 128) + 64);
-			text.setBackgroundColor(bg);
+			if (position%2==0) {
+				text.setBackgroundResource(R.drawable.banner2);
+			}else{
+				text.setBackgroundResource(R.drawable.banner1);
+			}
+//			text.setText("Page " + position);
+//			text.setBackgroundColor(bg);
 			container.addView(text, LayoutParams.MATCH_PARENT,
 					LayoutParams.MATCH_PARENT);
 			mJazzy.setObjectForPosition(text, position);
@@ -109,7 +113,7 @@ public class MainActivity extends Activity {
 
 		@Override
 		public CharSequence getPageTitle(int position) {
-			return "XXXAOOOXXX"+position;
+			return "XO198"+position;
 		}
 
 		@Override

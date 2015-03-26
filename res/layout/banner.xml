@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical" >
+
+    <com.jfeinstein.jazzyviewpager.JazzyViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/jazzy_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.jfeinstein.jazzyviewpager.JazzyViewPager>
+
+    <TextView
+        android:id="@+id/pagerdescribe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#7c333333"
+        android:padding="8dp"
+        android:text="text"
+        android:textColor="#ffffffff" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#00CCCCCC"
+        android:padding="10dip"
+        app:fillColor="#FFffffff"
+        app:pageColor="#8f8f8f8f"
+        app:radius="4dp"
+        app:strokeColor="#3f8f8f8f"
+        app:strokeWidth="1dp" />
+
+</FrameLayout>
