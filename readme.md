@@ -9,6 +9,8 @@
 
 - [NineOldAndroids](https://github.com/JakeWharton/NineOldAndroids)
 - [JazzyViewPager](https://github.com/jfeinstein10/JazzyViewPager)
+- [viewpagerindicator](https://github.com/JakeWharton/ViewPagerIndicator)
+
 
 
 ## issues
